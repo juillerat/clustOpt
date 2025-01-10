@@ -138,7 +138,7 @@ for (i in 1:length(vcfFiles)) {
 
     gdsInter <- snpgdsOpen(gdsOut)
     # Compute the dendrogram:
-    ibsInter <- snpgdsHCluster(snpgdsIBS(gdsInter, num.thread=2))
+    ibsInter <- snpgdsHCluster(snpgdsIBS(gdsInter, autosome.only=F, num.thread=2))
 
     # Make the matrix
     missingMatrix <- makeMatrix(vcfFiles[i], printStats = 0)
